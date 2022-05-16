@@ -20,7 +20,7 @@ export class AdRecord implements AdEntity {
             throw new ValidationError('Nazwa ogłoszenia nie może być pusta , ani przekraczać 100 znaków.')
         }
 
-        if (obj.description.length < 1000) {
+        if (obj.description.length > 1000) {
             throw new ValidationError('Treść ogłoszenia nie może przekraczać 1000 znaków.')
         }
 
@@ -35,5 +35,12 @@ export class AdRecord implements AdEntity {
         if (typeof obj.latitude !== 'number' || typeof obj.longitude !== 'number') {
             throw new ValidationError('Nie można zlokalizować ogłoszenia.')
         }
+
+        this.name = obj.name;
+        this.description = obj.description;
+        this.price = obj.price;
+        this.url = obj.url;
+        this.latitude = obj.latitude;
+        this.longitude = obj.longitude;
     }
 }

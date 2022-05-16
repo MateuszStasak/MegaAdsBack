@@ -13,9 +13,9 @@ app.use(cors({
 app.use(json());
 
 
-app.get ('/', async (req, res) => {
-    throw new Error ('Daaamn!');
-})
+// app.get ('/', async (req, res) => {
+//     throw new Error ('Daaamn!');
+// })
 
 
 

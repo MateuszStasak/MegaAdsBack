@@ -1,5 +1,8 @@
 import {AdRecord} from "../records/ad.record";
 
+
+// ------------- getOne method ------------------------------------------------------
+
 test('AdRecord returns data from database for one entry.', async () => {
     const ad = await AdRecord.getOne('1');
     expect(ad).toBeDefined();

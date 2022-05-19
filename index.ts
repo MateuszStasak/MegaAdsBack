@@ -4,6 +4,7 @@ import 'express-async-cors';
 import {json} from "express";
 import {handleError} from "./utils/error";
 import rateLimit from "express-rate-limit";
+import {adRouter} from "./routers/ad.router";
 
 const app = express();
 
@@ -19,11 +20,7 @@ app.use(rateLimit({
 }))
 
 
-// app.get ('/', async (req, res) => {
-//     throw new Error ('Daaamn!');
-// })
-
-
+app.use('/ad', adRouter);
 
 
 app.use(handleError);

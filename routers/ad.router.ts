@@ -18,4 +18,5 @@ export const adRouter = Router()
         await ad.insert();
         res.json(ad);
     })
+
 ;

@@ -1,28 +1,16 @@
 {
   "compilerOptions": {
-    "module": "commonJS",
-    "preserveConstEnums": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "es6",
     "noImplicitAny": true,
-    "moduleResolution": "node",
+    "preserveConstEnums": true,
     "sourceMap": true,
+    "target": "es6",
     "downlevelIteration": true,
-    "outDir": "dist",
+    "module": "CommonJS",
     "lib": ["es6"],
+    "outDir": "dist",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "baseUrl": ".",
-    "paths": {
-      "express": ["./node_modules/express/lib/express"],
-      "*": [
-        "node_modules/*",
-        "src/types/*",
-      ]
-    }
-  },
-  "include": [
-    "src/**/*"
-  ]
+    "moduleResolution": "Node",
+    "esModuleInterop": true
+  }
 }
